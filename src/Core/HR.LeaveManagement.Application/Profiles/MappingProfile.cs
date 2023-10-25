@@ -15,6 +15,6 @@ public class MappingProfile : Profile
         CreateMap<LeaveRequest, CreateLeaveRequestDto>().ReverseMap();
 
         CreateMap<LeaveAllocation, LeaveAllocationDto>().ReverseMap();
-        CreateMap<LeaveAllocation, CreateLeaceAllocationDto>().ReverseMap();
+        CreateMap<LeaveAllocation, CreateLeaveAllocationDto>().ReverseMap();
     }
 }
