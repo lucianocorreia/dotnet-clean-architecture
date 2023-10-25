@@ -5,6 +5,6 @@ namespace HR.LeaveManagement.Application.LeaveRequests.Requests;
 
 public class CreateLeaveRequestCommand : IRequest<int>
 {
-    public LeaveRequestDto LeaveRequestDto { get; set; } = default!;
+    public CreateLeaveRequestDto CreateLeaveRequestDto { get; set; } = default!;
 
 }

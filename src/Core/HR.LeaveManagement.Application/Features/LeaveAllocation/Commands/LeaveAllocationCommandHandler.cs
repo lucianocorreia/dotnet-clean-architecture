@@ -15,7 +15,7 @@ public class LeaveAllocationCommandHandler(
 
     public async Task<int> Handle(LeaveAllocationCommand request, CancellationToken cancellationToken)
     {
-        var leaveAllocation = mapper.Map<LeaveAllocation>(request.LeaveAllocationDto);
+        var leaveAllocation = mapper.Map<LeaveAllocation>(request.CreateLeaceAllocationDto);
         leaveAllocation = await leaveAllocationRepository.AddAsync(leaveAllocation);
         return leaveAllocation.Id;
     }

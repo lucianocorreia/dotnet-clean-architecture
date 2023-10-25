@@ -5,6 +5,6 @@ namespace HR.LeaveManagement.Application.Features.LeaveTypes.Requests;
 
 public class CreateLeaveTypeCommand : IRequest<int>
 {
-    public LeaveTypeDto LeaveTypeDto { get; set; } = default!;
+    public CreateLeaveTypeDto CreateLeaveTypeDto { get; set; } = default!;
 
 }

@@ -15,7 +15,7 @@ public class CreateLeaveTypeCommandHandler(
 
     public async Task<int> Handle(CreateLeaveTypeCommand request, CancellationToken cancellationToken)
     {
-        var leaveType = mapper.Map<LeaveType>(request.LeaveTypeDto);
+        var leaveType = mapper.Map<LeaveType>(request.CreateLeaveTypeDto);
         leaveType = await leaveTypeRepository.AddAsync(leaveType);
         return leaveType.Id;
     }
