@@ -2,7 +2,7 @@
 using HR.LeaveManagement.Application.Features.LeaveRequest.Requests;
 using MediatR;
 
-namespace HR.LeaveManagement.Application;
+namespace HR.LeaveManagement.Application.Features.LeaveRequest.Commands;
 
 public class UpdateLeaveRequestCommandHandler(
     ILeaveRequestRepository leaveRequestRepository,

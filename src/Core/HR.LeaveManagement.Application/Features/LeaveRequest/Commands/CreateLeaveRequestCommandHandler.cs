@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
 using HR.LeaveManagement.Application.LeaveRequests.Requests;
-using HR.LeaveManagement.Domain;
 using MediatR;
 
-namespace HR.LeaveManagement.Application.LeaveRequests.Commands;
+namespace HR.LeaveManagement.Application.Features.LeaveRequests.Commands;
 
 public class CreateLeaveRequestCommandHandler(
     ILeaveRequestRepository leaveRequestRepository,
@@ -15,7 +14,7 @@ public class CreateLeaveRequestCommandHandler(
 
     public async Task<int> Handle(CreateLeaveRequestCommand request, CancellationToken cancellationToken)
     {
-        var leaveRequest = mapper.Map<LeaveRequest>(request.CreateLeaveRequestDto);
+        var leaveRequest = mapper.Map<Domain.LeaveRequest>(request.CreateLeaveRequestDto);
         leaveRequest = await leaveRequestRepository.AddAsync(leaveRequest);
         return leaveRequest.Id;
     }
